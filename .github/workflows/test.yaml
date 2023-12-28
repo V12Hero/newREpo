@@ -33,25 +33,21 @@ jobs:
       # installing any dependencies
       - name: Install dependencies
         run:  |
-          cd React_App
           npm install
 
       # building the project (checking for build errors)
       - name: Building Project
         run: |
-          cd React_App
           npm run build-react
 
       # running unit tests on the application
       - name: Testing The Project
         run: |
-          cd React_App
           npm run test-react
 
       # performing linting in the applcation
       - name: Linting In The Project
         run: |
-          cd React_App
           npx eslint src/sum.js src/cartview.js src/shippingOptions.js
 
       # Deploy All Changes To The Testing Server
